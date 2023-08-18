@@ -5,6 +5,7 @@ import gzip
 from datetime import datetime, timedelta
 from multiprocessing import Pool
 
+# user-specified parameters, make sure these values are correct before execution
 input_folder = '/Users/tanggao/Desktop/projects/derivative_tickers_binance_BTCUSDT/'
 output_file = '/Users/tanggao/Desktop/projects/derivative_tickers_binance_BTCUSDT/output_combined.csv.gz'
 resample_interval = 1 * 1 * 60 * 10**6  # 8 hours in microseconds
