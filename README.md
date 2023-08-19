@@ -4,6 +4,7 @@
   * input: a folder containing consecutive .csv.gz files, for each we need to take out several rows by resampling by time intervals
   * output: a .csv.gz file combining all the rows taken out from each file in time order
   * This program might not need to be used on "derivative_ticker" dataset type. It can be used to resample any .csv.gz files containing a "timestamp" column if we corretly set the below user-specified parameters.
+  * Unconsecutive files in the input folder will raise an exception and cause the output file not generated. For example, if the input folder contains [2023-01-01.csv.gz, 2023-01-02.csv.gz, 2023-01-04.csv.gz], the program will terminate because 2023-01-03.csv.gz is not found.
   * The number of rows taken out for each file depends on the resample interval and the intervals are started from 00:00:00 each day.
   * The program utilized multiprocessing to resample each file parallely and stored in the list. The list is then sorted and being combined into one output file.
     
