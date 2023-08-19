@@ -8,7 +8,7 @@ from multiprocessing import Pool
 # user-specified parameters, make sure these values are correct before execution
 input_folder = '/Users/tanggao/Desktop/projects/derivative_tickers_binance_BTCUSDT/'
 output_file = '/Users/tanggao/Desktop/projects/derivative_tickers_binance_BTCUSDT/output_combined.csv.gz'
-resample_interval = 1 * 1 * 60 * 10**6  # 8 hours in microseconds
+resample_interval = 8 * 60 * 60 * 10**6  # 8 hours in microseconds
 assert_not_na_columns = ['funding_rate', 'last_price']
 dtype = {"exchange": str, "symbol": str, "timestamp": int, "local_timestamp": int, "funding_timestamp": str, "funding_rate":str, "predicted_funding_rate":str, "open_interest":str, "last_price":str, "index_price":str, "mark_price":str }
 
